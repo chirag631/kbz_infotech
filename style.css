@@ -1,0 +1,324 @@
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin:0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow: hidden;
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+.button_1{
+    background: #e8491d;
+    outline: none;
+    height:38px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:0;
+    color:#ffffff;
+}
+
+.dark{
+    padding:15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+/* header */
+
+header{
+    background: #35424a;
+    padding-top: 30px;
+    color: white;
+    min-height: 70px;
+    border-bottom: 5px solid #e8491d;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul{
+    margin:0;
+    padding:0;
+}
+
+header li{
+    float:left;
+    display:inline;
+    padding:0 20px 0 20px; 
+}
+
+header #brand{
+    float:left;
+}
+
+header #brand h1{
+    margin: 0;
+}
+
+header nav{
+    float:right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color:#e8491d;
+}
+
+header a:hover{
+    color:#cccccc;
+    font-weight: bold;
+}
+
+/* showcase */
+#showcase{
+    min-height: 400px;
+    background: url("./img/showcase.jpg") 0-400px  ;
+    text-align: center;
+    color:#ffffff;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/*newsletter */
+
+#newslatter{
+    padding: 15px;
+    color:#ffffff;
+    background: #35424a;
+}
+
+#newslatter h1{
+    float:left;
+}
+
+#newslatter form{
+    float:right;
+    margin-top: 15px;
+}
+
+#newslatter input[type="email"]{
+    padding:4px;
+    height:25px;
+    width:250px;
+}
+
+/*Boxes */
+#boxes{
+    margin-top: 15px;
+    
+}
+
+#boxes .box{
+    float:left;
+    width:30%;
+    text-align: center;
+    padding: 10px;
+}
+
+#boxes .box img{
+    width: 90px;
+}
+
+/* Projects */
+
+#projects{
+    
+    color:#ffffff;
+    background: #35424a;
+    
+}
+
+#projects .proj{
+    
+    width:25%;
+    text-align: center;
+    transition:all 0.6s ease-in-out;
+}
+
+#projects .proj:hover{
+    
+    transform: translateY(-20%);
+    
+}
+
+#projects .proj {
+    font-size: 20px;
+}
+
+
+/* Work Process */
+
+#work-process{
+    text-align: center;
+    color:#ffffff;
+    background: #35424a;
+    padding: 5px;
+}
+section#work-process .proj p {
+    font-size: 10px;
+}
+
+section#work-process .proj h1 {
+    font-size: 15px;
+}
+
+ .card{
+  display:flex;
+  justify-content: space-between;
+}
+
+#work-process .proj{
+
+    
+    padding:5px;
+    width:100px;
+    height:140px;
+    text-align: center;
+    transition:all 0.6s ease-in-out;
+    background: #ffffff;
+    color: black;
+    margin:20px 10px 20px 10px;
+    box-shadow: 5px 3px  #e74a2a;
+    border-radius: 15px;
+}
+
+.card img{
+    width: 40px;
+  
+}
+#work-process .proj:hover{
+    
+    transform: translateY(-20%);
+    
+}
+
+#work-process .proj h1{
+    font-size: 40px;
+}
+#work-process .proj p{
+    font-size: 25px;
+}
+
+
+
+
+
+
+/* sidebar */
+aside#sidebar{
+    float:right;
+    width:30%;
+  margin-top:10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width:90%;
+    padding:5px;
+  }
+
+/* Main col*/
+article#main-col{
+    float:left;
+    width:65%;
+  }
+
+/* Services */
+ul#services li{
+    padding:20px;
+    list-style: none;
+    margin-bottom: 5px;
+    border:1px solid #cccccc;
+    background: #e6e6e6;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    background: #e8491d;
+    color:#ffffff;
+    text-align: center;
+}
+
+
+@keyframes animate{
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:768px){
+    header #brand,header nav,header nav li,
+    #newslatter h1,#newslatter form,
+    #boxes .box, article#main-col,
+    aside#sidebar,#projects .proj,
+    #work-process .proj
+    {
+        float:none;
+        text-align: center;
+        width: 100%;
+    }
+    .card{
+        display:block;
+        width:50%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #projects ,
+    #work-process {
+        font-size: 10px;
+        padding:0;
+        margin:0 10px 0 10px;
+    }
+
+  
+
+   
+
+    header{
+        padding-bottom: 20px;
+    }
+
+    #showcase h1{
+        margin-top: 40px;
+    }
+
+    #newslatter button , .quote button{
+        width:100%;
+        display:block;
+    }
+
+    #newslatter form input[type="email"] , .quote input,.quote textarea{
+        margin-bottom: 5px;
+        width:100%;
+    }
+
+}
