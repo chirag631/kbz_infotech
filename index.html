@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width">
         <title>KBZ Infotech</title>
         <link rel="stylesheet" href="./style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <header>
@@ -22,15 +28,15 @@
             </div>
         </header>
 
-        <section id="showcase">
-            <div class="container">
-                <h1>Affordable Professional Website</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt elit convallis, dapibus ligula ut, semper libero. Duis mi erat, eleifend et sapien at, feugiat lobortis massa.</p>
+        <section id="showcase" >
+            <div class="container" data-aos="zoom-in"> 
+                <h1 >Affordable Professional Website</h1>
+                <p id="move">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt elit convallis, dapibus ligula ut, semper libero. Duis mi erat, eleifend et sapien at, feugiat lobortis massa.</p>
             </div>
         </section>
 
         <section id="newslatter">
-            <div class="container">
+            <div class="container" data-aos="fade-right" data-aos-offset="400"  data-aos-easing="ease-in-out">
                 <h1>Subscribe to our newslatter!</h1>
                 <form>
                     <input type="email" name="email" placeholder="Enter email..."/>
@@ -41,17 +47,17 @@
 
         <section id="boxes">
             <div class="container">
-                <div class="box">
+                <div  class=" box " data-aos="fade-right" data-aos-offset="300">
                     <img src="./img/logo_html.png"/>
                     <h3>Html5 Markup</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                 </div>
-                <div class="box">
+                <div class="box" data-aos="fade-up" data-aos-offset="300">
                     <img src="./img/logo_css.png"/>
                     <h3>Css Styling</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                 </div>
-                <div class="box">
+                <div class="box"data-aos="fade-left" data-aos-offset="300">
                     <img src="./img/logo_brush.png"/>
                     <h3>Graphic Design</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
@@ -89,7 +95,7 @@
 
         <section id="about">
             <div class="container">
-                <article id="main-col">
+                <article id="main-col" data-aos="fade-right" data-aos-offset="300" >
                     <h1 class="page-title">About Us</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat. Phasellus sit amet ex ipsum. Praesent pharetra tincidunt tempor. Etiam velit eros, dapibus eget porta in, lacinia et magna. Nam eget eros non orci consectetur congue at ac augue. Proin eget arcu in enim feugiat ultricies. Curabitur maximus metus nec metus pretium viverra at et orci. Integer hendrerit ante ut placerat cursus.
@@ -99,7 +105,7 @@
                     </p>
                 </article>
 
-                <aside id="sidebar">
+                <aside id="sidebar" data-aos="fade-left" data-aos-offset="300">
                     <div class="dark">
                         <h3>What We Do</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat. Phasellus sit amet ex ipsum. Praesent pharetra tincidunt tempor. Etiam velit eros, dapibus eget porta in, lacinia et magna</p>            
@@ -114,28 +120,28 @@
                 <h1>Work Process</h1>
                 <p>Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet interdum, vehicula ut ex. Donec ante diam.</p>
 
-                <div class="card">
-                <div class="proj">
+                <div class="card " >
+                <div class="proj proj1" data-aos="fade-right">
                     <img src="img/launch.png"/>
                     <h1>Planning</h1>
                     <p>Maecenas ligula dolor commodo </p>
                 </div>
-                <div class="proj">
+                <div class="proj proj2" data-aos="fade-right">
                     <img src="img/launch.png"/>
                     <h1>Design</h1>
                     <p>Maecenas ligula dolor commodo </p>
                 </div>
-                <div class="proj">
+                <div class="proj proj3" data-aos="fade-up">
                     <img src="img/launch.png"/>
                     <h1>Coding</h1>
                     <p>Maecenas ligula dolor commodo </p>
                 </div>
-                <div class="proj">
+                <div class="proj proj4" data-aos="fade-left">
                     <img src="img/launch.png"/>
                     <h1>Testing</h1>
                     <p>Maecenas ligula dolor commodo </p>
                 </div>
-                <div class="proj">
+                <div class="proj proj5" data-aos="fade-left">
                     <img src="img/launch.png"/>
                     <h1>Deploy</h1>
                     <p>Maecenas ligula dolor commodo </p>
@@ -145,10 +151,10 @@
         </section>
 
         <section id="services">
-            <div class="container">
+            <div class="container ">
                 <article id="main-col">
                     <h1 class="page-title">Services</h1>
-                    <ul id="services">
+                    <ul id="services" data-aos="fade-right">
                         <li>
                             <h3>Website Design</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem. Nulla facilisi.</p>
@@ -167,7 +173,7 @@
                     </ul>
                 </article>
 
-                <aside id="sidebar">
+                <aside id="sidebar" data-aos="fade-left" data-aos-offset="300">
                     <div class="dark">
                         <h3>Get A Quote</h3>
                         <form class="quote">
@@ -194,6 +200,39 @@
         <footer>
             <p>KBZ Infotech, Copyright &copy; 2021</p>
         </footer>
+
+        <script type="text/javascript" >
+/*
+            $(document).ready(function(){
+               
+                const element=document.querySelector('#services li p');
+                        element.style.setProperty("opacity",'0');
+                $(window).scroll(function(){
+                    var possition=$(document).scrollTop();
+
+                    console.log(possition);
+                   
+                    if((possition >450) && (possition <1200)){
+                        
+                        element.style.setProperty("transform",'translateX(-50%)');
+                         element.style.setProperty("animation","sliding 2s ease-in-out forwards");
+                         element.style.setProperty("opacity",'1');
+
+                    }
+                });
+            });
+*/
+           
+        </script>
+
+                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <script>
+                AOS.init({
+                    offset:300,
+                    duration:1000
+                    
+                });
+                </script>
 
     </body>
 </html>
