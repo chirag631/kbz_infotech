@@ -10,6 +10,7 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
@@ -18,13 +19,27 @@
                 <div id="brand">
                     <h1><span class="highlight">KBZ</span> Infotech</h1>
                 </div>
-                <nav>
-                    <ul>
+                <nav >
+                    
+                    <ul class="pc">
                         <li class="current"><a href="index.html">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
+                        
+                   
                     </ul>
+                   <div id="navLinks">
+                    <i class="fa fa-times hide" onclick="hideMenu()" ></i>
+                    <ul class="mobile">
+                        <li ><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                    
+                </div>
+                <i class="fa fa-bars show" onclick="showMenu()"></i>
                 </nav>
+                
             </div>
         </header>
 
@@ -233,6 +248,18 @@
                     
                 });
                 </script>
+
+<script>
+    var navLinks=document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+    
+</script>
 
     </body>
 </html>

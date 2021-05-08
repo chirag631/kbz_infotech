@@ -38,12 +38,16 @@ ul{
 /* header */
 
 header{
+
+    min-width: 100%;
+    
     background: #35424a;
     padding-top: 30px;
     color: white;
     min-height: 70px;
     border-bottom: 5px solid #e8491d;
 }
+
 header a{
     color: white;
     text-decoration: none;
@@ -75,18 +79,37 @@ header nav{
     margin-top: 10px;
 }
 
-header .highlight, header .current a{
+header .highlight{
     color:#e8491d;
 }
 
-header a:hover{
-    color:#cccccc;
-    font-weight: bold;
+header li a:hover{
+    color:#e8491d;
 }
 
+
+header ul li ::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    background: #fff;
+    display:block;
+    margin:auto;
+    transition: 0.5s;
+  }
+  
+  header ul li:hover ::after{
+    width: 100%;
+  }
+
+
+header .fa{
+
+    display:none;
+}
 /* showcase */
 #showcase{
-    min-height: 400px;
+    min-height: 500px;
     background: url("./img/showcase.jpg") 0-400px  ;
     text-align: center;
     color:#ffffff;
@@ -97,7 +120,7 @@ header a:hover{
     /*transform: translateX(-140%);
     animation:sliding 0.6s ease-in-out forwards; 
  */
-    margin-top: 100px;
+    margin-top: 250px;
     font-size: 55px;
     margin-bottom: 10px;
 
@@ -256,6 +279,7 @@ article#main-col{
     width:65%;
   }
 
+  
 /* Services */
 ul#services li{
    
@@ -280,6 +304,10 @@ footer {
 }
 
 
+.mobile{
+    display:none;
+}
+
 @keyframes animate{
     100%{
         transform: translateY(0);
@@ -292,7 +320,7 @@ footer {
     }
 }
 @media (max-width:768px){
-    header #brand,header nav,header nav li,
+    header #brand,header nav,
     #newslatter h1,#newslatter form,
     #boxes .box, article#main-col,
     aside#sidebar,#projects .proj,
@@ -302,6 +330,63 @@ footer {
         text-align: center;
         width: 100%;
     }
+    nav{
+        display:flex;
+    }
+    .mobile{
+        display:block;
+    }
+    .pc{ 
+        display:none;
+        
+      }
+      
+      #navLinks{
+          
+          background: #e74a2a;
+          color:#fff;
+          display:block;
+          position: fixed;
+          width:200px;
+          height: 100vh;
+          top:0;
+          right:-200px;
+          z-index: 100;
+          transition: 1s;
+      }
+header li{
+    display:block;
+    text-align: left ;
+    width:100%;
+    margin:12px 34px;
+    align-items: center;
+    
+}
+header li a:hover{
+    color: rgb(183, 219, 54);
+    
+}
+
+.hide{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+
+    nav .fa{
+        display:block;
+        color:#fff;
+        margin:10px;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .show{
+          position: absolute;
+          top:30px;
+          right:30px;
+      }
+
     .card{
         display:block;
         width:50%;
@@ -323,9 +408,10 @@ footer {
     header{
         padding-bottom: 20px;
     }
+    
 
     #showcase h1{
-        margin-top: 40px;
+        margin-top: 150px;
     }
 
     #newslatter button , .quote button{
