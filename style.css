@@ -356,8 +356,8 @@ footer {
       }
 header li{
     display:block;
-    text-align: left ;
-    width:100%;
+    float:left;
+    width:fit-content;
     margin:12px 34px;
     align-items: center;
     
