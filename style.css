@@ -173,6 +173,73 @@ header .fa{
     width: 90px;
 }
 
+/*slid*/
+
+.campus{
+    
+    display:flex;
+    width:80%;
+    margin:0 auto;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+ .campus-col{
+    flex-basis: 25%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position:relative;
+    overflow: hidden;
+    border:1px solid #000;
+    padding: 20px;
+    
+}
+
+.campus-col img{
+  height: 100%;
+  width: 100%;
+
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(0,0,0,0.9);
+}
+
+.layer h3,.layer p{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+
+}
+.layer:hover p{
+    bottom: 5%;
+    opacity: 1;
+}
+
 /* Projects */
 
 #projects{
@@ -325,10 +392,26 @@ footer {
     #boxes .box, article#main-col,
     aside#sidebar,#projects .proj,
     #work-process .proj
+
     {
         float:none;
         text-align: center;
         width: 100%;
+    }
+    .campus{
+        display:block;
+        
+        
+    }
+    
+    .campus-col h3{
+        font-size: 20px;
+    }
+    .campus-col p{
+        font-size: 15px;
+    }
+    .layer:hover p{
+        bottom: 25%;
     }
     nav{
         display:flex;
@@ -360,8 +443,6 @@ header li{
     width:fit-content;
     margin:12px 34px;
     align-items: center;
-    
-    
 }
 header li a:hover{
     color: rgb(183, 219, 54);
