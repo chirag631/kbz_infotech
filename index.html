@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
-        <header>
+        <header id="header">
             <div class="container">
                 <div id="brand">
                     <h1><span class="highlight">KBZ</span> Infotech</h1>
@@ -23,10 +23,8 @@
                     
                     <ul class="pc">
                         <li class="current"><a href="index.html">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a id="about1" href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
-                        
-                   
                     </ul>
                    <div id="navLinks">
                     <i class="fa fa-times hide" onclick="hideMenu()" ></i>
@@ -39,9 +37,13 @@
                 </div>
                 <i class="fa fa-bars show" onclick="showMenu()"></i>
                 </nav>
-                
+                <div id="scroll">
+                <i class="upper one fa fa-chevron-up" aria-hidden="true"></i>
+                <i class="upper fa two fa-chevron-up" aria-hidden="true"></i>
+            </div>
             </div>
         </header>
+        
 
         <section id="showcase" >
             <div class="container" data-aos="zoom-in"> 
@@ -55,7 +57,7 @@
                 <h1>Subscribe to our newslatter!</h1>
                 <form>
                     <input type="email" name="email" placeholder="Enter email..."/>
-                    <button type="submit" class="button_1">Subscribe</button>
+                    <button type="submit" id="button1" class="button_1">Subscribe</button>
                 </form>
             </div>
         </section>
@@ -83,8 +85,9 @@
 
         -->
 
-        <section class="campus">
-            
+        <section id="campus">
+            <div class="container">  
+                <div class="campus">         
                 <div  class=" campus-col " data-aos="fade-right" data-aos-offset="300">
 
                     <img src="./img/logo_html.png"/>
@@ -108,7 +111,8 @@
                     
                 </div>
                 </div>
-            
+            </div>
+
         </section>
 
         <section id="projects">
@@ -135,7 +139,7 @@
                     
                     </div>
                     </div>
-
+                </div> 
             </div>
         </section>
 
@@ -235,7 +239,7 @@
                                 <label>Message</label><br/>
                                 <textarea placeholder="Message"></textarea><br/>
                             </div>
-                            <button type="button" class="button_1">Send</button>
+                            <button type="button" id="button2" class="button_1">Send</button>
                         </form>
                     </div>
 
@@ -248,26 +252,22 @@
         </footer>
 
         <script type="text/javascript" >
-/*
+
             $(document).ready(function(){
                
-                const element=document.querySelector('#services li p');
-                        element.style.setProperty("opacity",'0');
+                const element=document.querySelector('#scroll');
+                        
                 $(window).scroll(function(){
                     var possition=$(document).scrollTop();
-
-                    console.log(possition);
-                   
-                    if((possition >450) && (possition <1200)){
-                        
-                        element.style.setProperty("transform",'translateX(-50%)');
-                         element.style.setProperty("animation","sliding 2s ease-in-out forwards");
-                         element.style.setProperty("opacity",'1');
-
+                    if((possition===0)){
+                        element.style.setProperty("display",'none');
+                    }
+                    else{
+                        element.style.setProperty("display",'block');
                     }
                 });
             });
-*/
+
            
         </script>
 
@@ -278,6 +278,8 @@
                     duration:1000
                     
                 });
+
+
                 </script>
 
 <script>
@@ -289,7 +291,20 @@
     function hideMenu(){
         navLinks.style.right="-200px";
     }
-    
+
+  
+
+    $("#scroll").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#header").offset().top
+    }, 1000);
+});
+
+$("#about1").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 1000);
+});
 </script>
 
     </body>

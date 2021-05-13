@@ -107,12 +107,38 @@ header .fa{
 
     display:none;
 }
+header .upper{
+    display:block;
+    position: fixed;
+    cursor: pointer;
+    color: #60d4c5;
+    background-color: transparent;
+    font-size: 30px;
+    
+    animation: animat 1s infinite ease-in ;
+    transition: 1s;
+    z-index: 100;
+}
+header .scroll{
+    
+}
+header .one{
+    bottom: 30px;
+    right:45%;
+    
+}
+
+header .two{
+    bottom: 17px;
+    right:45%;
+}
 /* showcase */
 #showcase{
     min-height: 500px;
-    background: url("./img/showcase.jpg") 0-400px  ;
+    background:linear-gradient(rgba(53,66,74,0.7),rgba(53,66,74,0.7)), url("https://cdn.vox-cdn.com/thumbor/5eiruJp_yPdMcGq9ERfl_ifh24c=/0x0:8037x6028/925x925/filters:focal(3480x2191:4764x3475):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66561283/Erickson_7504.0.jpg")   ;
     text-align: center;
     color:#ffffff;
+    overflow: hidden;
 }
 
 #showcase h1{
@@ -176,13 +202,14 @@ header .fa{
 /*slid*/
 
 .campus{
-    
     display:flex;
-    width:80%;
+    
     margin:0 auto;
     text-align: center;
     justify-content: space-between;
     padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
  .campus-col{
@@ -388,6 +415,15 @@ footer {
         transform: translateX(0);
     }
 }
+
+@keyframes animat{
+   0%{
+       transform: translateY(10px);
+   }
+    100%{
+        transform: translateY(0);
+    }
+}
 @media (max-width:768px){
     header #brand,header nav,
     #newslatter h1,#newslatter form,
@@ -507,5 +543,7 @@ header li a:hover{
         margin-bottom: 5px;
         width:100%;
     }
+
+
 
 }
